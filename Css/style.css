@@ -1,4 +1,5 @@
-*{
+/* Estilos Generales */
+* {
   margin: 0px;
   padding: 0px;
   box-sizing: border-box;
@@ -7,17 +8,21 @@
   font-family: cursive;
 }
 
-/* Estilos Header */
-#header{
-  height: 60px;
-  background-color: #021B2B;
+body {
+  position: relative;
 }
 
-input[type="checkbox"]{
+/* Estilos Header */
+#header {
+  height: 60px;
+  background-color: #021b2b;
+}
+
+input[type='checkbox'] {
   display: none;
 }
 
-#label{
+#label {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -32,42 +37,42 @@ input[type="checkbox"]{
   color: #fff;
 }
 
-#label:hover{
+#label:hover {
   border-radius: 50%;
   background-color: #fff;
-  color: #021B2B;
+  color: #021b2b;
 }
 
-.abrir{
+.abrir {
   display: block;
   opacity: 1;
   transition: 0.5s;
 }
 
-.cerrar{
+.cerrar {
   display: none;
   opacity: 0;
   transition: 0.5s;
 }
 
-#checkbox:checked ~ #label .cerrar{
+#checkbox:checked ~ #label .cerrar {
   display: block;
   opacity: 1;
   transition: 0.5s;
 }
 
-#checkbox:checked ~ #label .abrir{
+#checkbox:checked ~ #label .abrir {
   display: none;
   opacity: 0;
   transition: 0.5s;
 }
 
-#checkbox:checked ~ .header-nav{
+#checkbox:checked ~ .header-nav {
   right: 0px;
   transition: 0.5s;
 }
 
-.header-nav{
+.header-nav {
   position: fixed;
   top: 0px;
   right: -100%;
@@ -75,10 +80,10 @@ input[type="checkbox"]{
   height: 100vh;
   transition: 0.5s;
   z-index: 1;
-  background-color: #021B2B;
+  background-color: #021b2b;
 }
 
-.header-nav-ul{
+.header-nav-ul {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -87,18 +92,18 @@ input[type="checkbox"]{
   gap: 20px;
 }
 
-.header-nav-ul li a{
+.header-nav-ul li a {
   font-size: 1.5rem;
   transition: 0.5s;
   color: #fff;
 }
 
-.header-nav-ul li a:hover{
+.header-nav-ul li a:hover {
   color: #aaa;
 }
 
 /* Estilos Main */
-#main{
+#main {
   height: 100vh;
   width: 100%;
   box-shadow: 0px 0px 10px #000;
@@ -134,7 +139,7 @@ input[type="checkbox"]{
 /* Main Conoce Nicaragua */
 #main .main-conoceNic {
   padding: 20px;
-  color: #021B2B;
+  color: #021b2b;
   background-color: #f1ebeb;
 }
 
@@ -157,13 +162,160 @@ input[type="checkbox"]{
   box-shadow: 0px 0px 10px #000;
 }
 
+/* Main Turismo */
+#main-turismo {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  padding: 20px;
+  color: #fff;
+  background-color: #021b2b;
+}
+
+#main-turismo h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+#main-turismo p {
+  font-size: 1rem;
+  margin-bottom: 10px;
+}
+
+.main-turismo-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+.main-turismo-cards-ciudades {
+  height: 250px;
+  margin: 10px;
+  border-radius: 20px;
+  transition: 0.5s;
+  color: #fff;
+  background-color: #021b2b;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  box-shadow: 0px 0px 5px #000;
+}
+
+.main-turismo-cards-ciudades:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+}
+
+.main-turismo-cards .managua {
+  background-image: url('/Assets/Img/managua.png');
+}
+
+.main-turismo-cards .granada {
+  background-image: url('/Assets/Img/granada.png');
+}
+
+.main-turismo-cards .leon {
+  background-image: url('/Assets/Img/leon.png');
+}
+
+.main-turismo-cards .sanJuan {
+  background-image: url('/Assets/Img/sanJuan.png');
+}
+
+.main-turismo-cards .ometepe {
+  background-image: url('/Assets/Img/ometepe.png');
+}
+
+.main-turismo-cards .cornIsland {
+  background-image: url('/Assets/Img/cornIsland.png');
+}
+
+.main-turismo-cards .masaya {
+  background-image: url('/Assets/Img/masaya.png');
+}
+
+.main-turismo-cards .esteli {
+  background-image: url('/Assets/Img/esteli.png');
+}
+
+.main-turismo-cards .rioSanJuan {
+  background-image: url('/Assets/Img/rioSanJuan.png');
+}
+
+.main-turismo-cards .matagalpa {
+  background-image: url('/Assets/Img/matagalpa.png');
+}
+
+.main-turismo-cards .bluefields {
+  background-image: url('/Assets/Img/bluefields.png');
+}
+
+.main-turismo-cards-ciudades-contenido {
+  display: none;
+}
+
+.main-turismo-cards-ciudades:hover .main-turismo-cards-ciudades-contenido {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  gap: 20px;
+  border-radius: 20px;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.main-turismo-cards-ciudades-contenido h3 {
+  font-size: 1.5rem;
+}
+
+.main-turismo-cards-ciudades-contenido ul {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.main-turismo-cards-ciudades-contenido ul li {
+  list-style: disc;
+}
+
+.main-turismo-cards-ciudades-contenido ul li a {
+  font-size: 1rem;
+  color: #fff;
+}
+
+.main-turismo-cards-ciudades-contenido ul li a:hover {
+  color: #144ccb;
+}
+
+.main-turismo-cards-ciudades-contenido ul li a:active {
+  color: #fff;
+}
+
+.main-turismo-cards-ciudades-contenido .btn {
+  border: none;
+  font-size: 1rem;
+  padding: 10px 20px;
+  border-radius: 20px;
+  transition: 0.5s;
+  color: #fff;
+  background-color: #144ccb;
+  box-shadow: 0px 0px 10px #000;
+}
+
+.main-turismo-cards-ciudades-contenido .btn:hover {
+  background-color: #fff;
+  color: #144ccb;
+}
+
 /* Estilos Footer */
 #footer {
+  position: fixed;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  position: fixed;
   text-align: center;
   width: 100%;
   bottom: 0px;
