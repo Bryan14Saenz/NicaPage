@@ -8,14 +8,31 @@
   font-family: cursive;
 }
 
-/* Estilos Header */
-#header {
-  height: 60px;
-  background-color: #021b2b;
-}
-
 input[type='checkbox'] {
   display: none;
+}
+
+.btn {
+  font-size: 1rem;
+  margin: 10px auto;
+  padding: 10px 20px;
+  border-radius: 20px;
+  transition: 0.5s;
+  color: #fff;
+  border: 1px solid #fff;
+  box-shadow: 0px 0px 10px #000;
+}
+
+.btn:hover {
+  cursor: pointer;
+  background-color: #fff;
+  color: #144ccb;
+}
+
+/* Estilos Header */
+#header {
+  height: 20px;
+  background-color: #021b2b;
 }
 
 #label {
@@ -49,6 +66,10 @@ input[type='checkbox'] {
   display: none;
   opacity: 0;
   transition: 0.5s;
+}
+
+#checkbox {
+  display: none;
 }
 
 #checkbox:checked ~ #label .cerrar {
@@ -101,7 +122,6 @@ input[type='checkbox'] {
 /* Estilos Main */
 #main {
   width: 100%;
-  box-shadow: 0px 0px 10px #000;
 }
 
 /* Main Inicio */
@@ -304,6 +324,14 @@ input[type='checkbox'] {
   color: #144ccb;
 }
 
+#check-Turismo:not(:checked) ~ .oculto {
+  display: none;
+}
+
+#check-Turismo:checked ~ .oculto {
+  display: block;
+}
+
 /* Main Gastronomía */
 
 /* Main Historia */
@@ -343,6 +371,7 @@ input[type='checkbox'] {
   flex-direction: column;
   padding: 20px;
   margin: 10px;
+  margin-bottom: 25px;
   gap: 10px;
   border-radius: 5px;
   box-shadow: 0px 0px 5px #000;
@@ -373,6 +402,14 @@ input[type='checkbox'] {
   animation: fadeIn 0.5s;
 }
 
+#check-Historia:not(:checked) ~ .oculto {
+  display: none;
+}
+
+#check-Historia:checked ~ .oculto {
+  display: block;
+}
+
 .main-historia-contenedor-item:hover
   .main-historia-contenedor-item-contenido
   .texto {
@@ -381,15 +418,28 @@ input[type='checkbox'] {
 
 /* Estilos Curiosidades */
 #main-curiosidades {
+  text-align: center;
+  margin-bottom: 350px;
   padding: 20px;
   color: #021b2b;
   background-color: #fff;
+}
+
+#main-curiosidades label {
+  color: #144ccb;
+}
+
+#main-curiosidades label:hover {
+  border: none;
+  color: #fff;
+  background-color: #021b2b;
 }
 
 .main-curiosidades-accordion {
   display: flex;
   flex-direction: column;
   gap: 10px;
+  margin-bottom: 20px;
   border-radius: 5px;
 }
 
@@ -456,6 +506,14 @@ input[type='checkbox'] {
 .main-curiosidades-accordion .accordion-item:hover .accordion-item-collapse {
   animation: fadeIn 0.5s linear;
   animation-fill-mode: forwards;
+}
+
+#check-Curiosidades:not(:checked) ~ .oculto {
+  display: none;
+}
+
+#check-Curiosidades:checked ~ .oculto {
+  display: block;
 }
 
 /* Estilos Footer */
