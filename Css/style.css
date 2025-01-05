@@ -8,6 +8,14 @@
   font-family: cursive;
 }
 
+html {
+  scroll-behavior: smooth;
+  scrollbar-width: thin;
+  scrollbar-color: #144ccb #021b2b;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+
 input[type='checkbox'] {
   display: none;
 }
@@ -43,8 +51,9 @@ input[type='checkbox'] {
   position: fixed;
   top: 10px;
   right: 10px;
-  width: 40px;
-  height: 40px;
+  width: 50px;
+  height: 50px;
+  font-size: 1.5rem;
   transition: 0.5s;
   z-index: 2;
   color: #fff;
@@ -333,6 +342,86 @@ input[type='checkbox'] {
 }
 
 /* Main Gastronomía */
+#main-gastronomía {
+  text-align: center;
+  padding: 20px;
+  color: #021b2b;
+  background-color: #fff;
+}
+
+#main-gastronomía h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+#main-gastronomía p {
+  font-size: 1rem;
+  margin-bottom: 10px;
+}
+
+.main-gastronomía-contenedor {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+}
+
+.main-gastronomía-contenedor-item {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  margin: 10px;
+  border-radius: 5px;
+  color: #fff;
+  background-color: #021b2b;
+  box-shadow: 0px 0px 5px #000;
+}
+
+.main-gastronomía-contenedor-item h2 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.main-gastronomía-contenedor-item-contenido {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 10px;
+  border-radius: 5px;
+}
+
+.main-gastronomía-contenedor-item-contenido img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  margin: 5px;
+  border-radius: 5px;
+}
+
+.main-gastronomía-contenedor-item-contenido p {
+  text-align: center;
+  font-size: 1rem;
+  margin: 5px;
+  padding: 5px;
+}
+
+#main-gastronomía .btn {
+  color: #144ccb;
+  background-color: #fff;
+}
+
+#main-gastronomía .btn:hover {
+  border: 1px solid #fff;
+  color: #fff;
+  background-color: #021b2b;
+}
+
+#check-Gastronomía:not(:checked) ~ .oculto {
+  display: none;
+}
+
+#check-Gastronomía:checked ~ .oculto {
+  display: block;
+}
 
 /* Main Historia */
 #main-historia {
@@ -419,7 +508,7 @@ input[type='checkbox'] {
 /* Estilos Curiosidades */
 #main-curiosidades {
   text-align: center;
-  margin-bottom: 350px;
+  margin-bottom: 20px;
   padding: 20px;
   color: #021b2b;
   background-color: #fff;
@@ -478,6 +567,7 @@ input[type='checkbox'] {
 
 .main-curiosidades-accordion .accordion-item-header button {
   border: none;
+  width: 100%;
   font-size: 1rem;
   padding: 5px 10px;
   border-radius: 5px;
@@ -508,6 +598,10 @@ input[type='checkbox'] {
   animation-fill-mode: forwards;
 }
 
+#main-curiosidades .btn:hover {
+  border: 1px solid #fff;
+}
+
 #check-Curiosidades:not(:checked) ~ .oculto {
   display: none;
 }
@@ -518,8 +612,6 @@ input[type='checkbox'] {
 
 /* Estilos Footer */
 #footer {
-  position: fixed;
-  bottom: 0px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -536,8 +628,6 @@ input[type='checkbox'] {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  position: absolute;
-  top: -100px;
   padding: 10px;
   margin: 10px auto;
   gap: 10px;
@@ -570,10 +660,6 @@ input[type='checkbox'] {
 #footer .footer-mailto a:hover {
   color: #144ccb;
   background-color: #fff;
-}
-
-#footer .footer-info {
-  margin-top: 80px;
 }
 
 #footer .footer-info p {
@@ -622,3 +708,15 @@ input[type='checkbox'] {
     max-height: min-content;
   }
 }
+
+@keyframes aparecer {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Media Queries */mc39
