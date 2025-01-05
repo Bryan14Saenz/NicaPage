@@ -709,14 +709,76 @@ input[type='checkbox'] {
   }
 }
 
-@keyframes aparecer {
+@keyframes fadeIn2 {
   0% {
+    opacity: 0;
+    height: 0px;
+  }
+
+  50% {
     opacity: 0;
   }
 
   100% {
     opacity: 1;
+    height: 120px;
+    max-height: min-content;
   }
 }
 
-/* Media Queries */mc39
+/* Media Queries */
+@media screen and (min-width: 500px) {
+  /* Main Turismo */
+
+  #main-turismo {
+    display: block;
+  }
+
+  .main-turismo-cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin-bottom: 20px;
+  }
+
+  /* Main Gastronomía */
+  #main-gastronomía h2 {
+    font-size: 2.2rem;
+  }
+
+  #main-gastronomía p {
+    font-size: 1.2rem;
+  }
+
+  .main-gastronomía-contenedor {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* Main Historia */
+  #main-historia h2 {
+    font-size: 2.2rem;
+  }
+
+  #main-historia h3 {
+    font-size: 1.7rem;
+  }
+
+  #main-historia p {
+    font-size: 1.2rem;
+  }
+
+  .main-historia-contenedor {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+
+  .main-historia-contenedor-item-contenido .texto {
+    display: none;
+    overflow-y: scroll;
+    max-height: 200px;
+  }
+}
+
+@media screen and (max-width: 960px) {
+}
