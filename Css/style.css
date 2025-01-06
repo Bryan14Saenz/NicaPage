@@ -780,5 +780,158 @@ input[type='checkbox'] {
   }
 }
 
-@media screen and (max-width: 960px) {
+@media screen and (min-width: 800px) {
+  .main-turismo-cards-ciudades:nth-child(3) {
+    grid-area: 3 / 1 / 4 / 4;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  /* Header */
+  #header {
+    height: 0px;
+  }
+
+  #label {
+    font-size: 2rem;
+  }
+
+  /* Main Inicio */
+  #main .main-inicio-texto h1 {
+    font-size: 3rem;
+  }
+
+  #main .main-inicio-texto h2 {
+    font-size: 2rem;
+  }
+
+  /* Main Conoce */
+  #main .main-conoceNic h2 {
+    font-size: 2rem;
+  }
+
+  #main .main-conoceNic-video {
+    margin: 0px auto;
+    max-width: 800px;
+  }
+
+  /* Main Turismo */
+  #main-turismo h2{
+    font-size: 2.5rem;
+  }
+
+  #main-turismo p {
+    font-size: 1.5rem;
+  }
+
+  .main-turismo-cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .main-turismo-cards-ciudades:nth-child(3) {
+    grid-area: auto;
+  }
+
+  #check-Turismo:not(:checked) ~ .oculto {
+    display: flex;
+  }
+
+  #check-Turismo, .btn {
+    display: none;
+  }
+
+  /* Main Gastronomía */
+  #main-gastronomía h2{
+    font-size: 2.5rem;
+  }
+
+  #main-gastronomía p {
+    font-size: 1.5rem;
+  }
+
+  .main-gastronomía-contenedor {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  #check-Gastronomía:not(:checked) ~ .oculto {
+    display: flex;
+  }
+
+  #check-Gastronomía, .btn {
+    display: none;
+  }
+
+  /* Main Historia */
+  #main-historia h2{
+    font-size: 2.5rem;
+  }
+
+  #main-historia h3 {
+    font-size: 1.7rem;
+  }
+
+  #main-historia p {
+    font-size: 1.5rem;
+  }
+
+  .main-historia-contenedor {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  #check-Historia:not(:checked) ~ .oculto {
+    display: flex;
+  }
+
+  #check-Historia, .btn {
+    display: none;
+  }
+
+  .main-historia-contenedor-item-contenido .texto {
+    display: flex;
+  }
+
+  /* Main Curiosidades */
+  #main-curiosidades h2 {
+    font-size: 2.5rem;
+  }
+
+  #main-curiosidades p {
+    font-size: 1.5rem;
+  }
+
+  .main-curiosidades-accordion {
+    width: 800px;
+    margin: 0px auto;
+  }
+
+  .accordion-item-header button {
+    font-size: 2rem;
+  }
+
+  .accordion-item-collapse {
+    font-size: 1.5rem;
+    width: 600px;
+    margin: 0px auto;
+  }
+  
+
+  #check-Curiosidades:not(:checked) ~ .oculto {
+    display: block;
+  }
+
+  #check-Curiosidades, .btn {
+    display: none;
+  }
+
+  /* Footer */
+  #footer {
+    font-size: 1.5rem;
+  }
+
+  .footer-mailto {
+    width: 800px;
+    margin: 0px auto;
+  }
 }
