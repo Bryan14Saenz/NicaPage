@@ -1,19 +1,36 @@
-/* Estilos Generales */
+/* Reset */
 * {
-  margin: 0px;
-  padding: 0px;
   box-sizing: border-box;
   text-decoration: none;
   list-style: none;
   font-family: cursive;
+  margin: 0px;
+  padding: 0px;
 }
 
+/* Variables */
+:root {
+  --color1: #021b2b;
+  --color2: #144ccb;
+  --color3: #aaaaaa;
+  --color4: #ffffff;
+  --color5: #000000;
+}
+
+/* Estilos Generales */
 html {
   scroll-behavior: smooth;
   scrollbar-width: thin;
   scrollbar-color: #144ccb #021b2b;
   overflow-x: hidden;
   overflow-y: scroll;
+}
+
+body {
+  overflow: hidden;
+  width: 100%;
+  font-size: 16px;
+  background-color: #021b2b;
 }
 
 input[type='checkbox'] {
@@ -612,326 +629,170 @@ input[type='checkbox'] {
 
 /* Estilos Footer */
 #footer {
+  text-align: center;
+  padding-bottom: 1rem;
+  color: var(--color5);
+  background-color: var(--color4);
+}
+
+.footer__mailto {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  text-align: center;
-  width: 100%;
-  padding: 10px;
-  color: #fff;
-  background-color: #021b2b;
+  gap: 1.5rem 0;
+  padding: 2rem 1rem;
+  margin-bottom: 1rem;
+  border-radius: 0 0 1rem 1rem;
+  color: var(--color4);
+  background-color: var(--color1);
+  box-shadow: 5px 5px 10px var(--color1);
 }
 
-#footer .footer-mailto {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 10px;
-  margin: 10px auto;
-  gap: 10px;
-  border-radius: 20px;
-  color: #fff;
-  background-color: #144ccb;
-  box-shadow: 0px 0px 10px #000;
-}
-
-#footer .footer-mailto h1 {
-  font-size: 1.5rem;
-}
-
-#footer .footer-mailto p {
-  width: 60%;
-  margin: 10px auto;
+.footer__mailto h2,
+p {
   font-size: 1rem;
 }
 
-#footer .footer-mailto a {
-  text-decoration: none;
-  transition: 0.5s;
-  font-size: 1.5rem;
-  padding: 5px 10px;
-  border-radius: 50px;
-  border: 1px solid #fff;
-  color: #fff;
+.footer__mailto a {
+  font-size: 1rem;
+  padding: 0.5rem 1rem;
+  border-radius: 2rem;
+  border: 1px solid var(--color3);
+  color: var(--color4);
 }
 
-#footer .footer-mailto a:hover {
-  color: #144ccb;
-  background-color: #fff;
-}
-
-#footer .footer-info p {
+.footer__info p {
   text-align: center;
-  font-size: 1em;
+  font-size: 1rem;
 }
 
-#footer .footer-info p:first-child {
-  text-decoration: underline;
-  font-size: 1.5rem;
+.footer__info p:first-child {
+  font-size: 1.2rem;
 }
 
-#footer .footer-info ul {
+.footer__info ul {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 20px;
-  margin: 20px;
+  gap: 2rem;
+  margin: 1rem 0;
 }
 
-#footer .footer-info ul li a {
-  text-decoration: underline;
-  transition: 0.5s;
-  font-size: 1rem;
-  color: #fff;
-}
-
-#footer .footer-info ul li a:hover {
-  color: #144ccb;
-}
-
-/* Animaciones */
-@keyframes fadeIn {
-  0% {
-    opacity: 0;
-    height: 0px;
-  }
-
-  50% {
-    opacity: 0;
-  }
-
-  100% {
-    opacity: 1;
-    height: 120px;
-    max-height: min-content;
-  }
-}
-
-@keyframes fadeIn2 {
-  0% {
-    opacity: 0;
-    height: 0px;
-  }
-
-  50% {
-    opacity: 0;
-  }
-
-  100% {
-    opacity: 1;
-    height: 120px;
-    max-height: min-content;
-  }
+.footer__info ul li a img {
+  object-fit: cover;
+  width: 1.5rem;
+  height: 1.5rem;
 }
 
 /* Media Queries */
-@media screen and (min-width: 500px) {
-  /* Main Turismo */
-
-  #main-turismo {
-    display: block;
-  }
-
-  .main-turismo-cards {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    margin-bottom: 20px;
-  }
-
-  /* Main Gastronomía */
-  #main-gastronomía h2 {
-    font-size: 2.2rem;
-  }
-
-  #main-gastronomía p {
-    font-size: 1.2rem;
-  }
-
-  .main-gastronomía-contenedor {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  /* Main Historia */
-  #main-historia h2 {
-    font-size: 2.2rem;
-  }
-
-  #main-historia h3 {
-    font-size: 1.7rem;
-  }
-
-  #main-historia p {
-    font-size: 1.2rem;
-  }
-
-  .main-historia-contenedor {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 10px;
-  }
-
-  .main-historia-contenedor-item-contenido .texto {
-    display: none;
-    overflow-y: scroll;
-    max-height: 200px;
-  }
-}
-
-@media screen and (min-width: 800px) {
-  .main-turismo-cards-ciudades:nth-child(3) {
-    grid-area: 3 / 1 / 4 / 4;
-  }
-}
-
-@media screen and (min-width: 1000px) {
-  /* Header */
-  #header {
-    height: 0px;
-  }
-
-  #label {
-    font-size: 2rem;
-  }
-
-  /* Main Inicio */
-  #main .main-inicio-texto h1 {
-    font-size: 3rem;
-  }
-
-  #main .main-inicio-texto h2 {
-    font-size: 2rem;
-  }
-
-  /* Main Conoce */
-  #main .main-conoceNic h2 {
-    font-size: 2rem;
-  }
-
-  #main .main-conoceNic-video {
-    margin: 0px auto;
-    max-width: 800px;
-  }
-
-  /* Main Turismo */
-  #main-turismo h2{
-    font-size: 2.5rem;
-  }
-
-  #main-turismo p {
-    font-size: 1.5rem;
-  }
-
-  .main-turismo-cards {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-  }
-  .main-turismo-cards-ciudades:nth-child(3) {
-    grid-area: auto;
-  }
-
-  #check-Turismo:not(:checked) ~ .oculto {
-    display: flex;
-  }
-
-  #check-Turismo, .btn {
-    display: none;
-  }
-
-  /* Main Gastronomía */
-  #main-gastronomía h2{
-    font-size: 2.5rem;
-  }
-
-  #main-gastronomía p {
-    font-size: 1.5rem;
-  }
-
-  .main-gastronomía-contenedor {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-  }
-
-  #check-Gastronomía:not(:checked) ~ .oculto {
-    display: flex;
-  }
-
-  #check-Gastronomía, .btn {
-    display: none;
-  }
-
-  /* Main Historia */
-  #main-historia h2{
-    font-size: 2.5rem;
-  }
-
-  #main-historia h3 {
-    font-size: 1.7rem;
-  }
-
-  #main-historia p {
-    font-size: 1.5rem;
-  }
-
-  .main-historia-contenedor {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-  }
-
-  #check-Historia:not(:checked) ~ .oculto {
-    display: flex;
-  }
-
-  #check-Historia, .btn {
-    display: none;
-  }
-
-  .main-historia-contenedor-item-contenido .texto {
-    display: flex;
-  }
-
-  /* Main Curiosidades */
-  #main-curiosidades h2 {
-    font-size: 2.5rem;
-  }
-
-  #main-curiosidades p {
-    font-size: 1.5rem;
-  }
-
-  .main-curiosidades-accordion {
-    width: 800px;
-    margin: 0px auto;
-  }
-
-  .accordion-item-header button {
-    font-size: 2rem;
-  }
-
-  .accordion-item-collapse {
-    font-size: 1.5rem;
-    width: 600px;
-    margin: 0px auto;
-  }
-  
-
-  #check-Curiosidades:not(:checked) ~ .oculto {
-    display: block;
-  }
-
-  #check-Curiosidades, .btn {
-    display: none;
-  }
-
+/* Tablet */
+@media screen and (min-width: 768px) {
   /* Footer */
   #footer {
+    padding: 1rem 2rem;
+  }
+
+  .footer__mailto {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: center;
+    gap: 1rem;
+    border-radius: 1rem;
+  }
+}
+
+/* Desktop */
+@media screen and (min-width: 1024px) {
+  /* Footer */
+  #footer {
+    padding: 2rem 4rem;
+  }
+
+  .footer__mailto h2,
+  p {
+    font-size: 1.2rem;
+  }
+
+  .footer__mailto a {
+    font-size: 1.2rem;
+  }
+
+  .footer__info p {
+    font-size: 1.2rem;
+  }
+
+  .footer__info p:first-child {
+    font-size: 1.4rem;
+  }
+
+  .footer__info ul li a img {
+    width: 2rem;
+    height: 2rem;
+  }
+}
+
+/* Desktop XL */
+@media screen and (min-width: 1440px) {
+  /* Footer */
+  #footer {
+    padding: 2rem 8rem;
+  }
+
+  .footer__mailto h2,
+  p {
     font-size: 1.5rem;
   }
 
-  .footer-mailto {
-    width: 800px;
-    margin: 0px auto;
+  .footer__mailto a {
+    font-size: 1.5rem;
+  }
+
+  .footer__info p {
+    font-size: 1.4rem;
+  }
+
+  .footer__info p:first-child {
+    font-size: 1.6rem;
+  }
+
+  .footer__info ul li a img {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+}
+
+/* Desktop XXL */
+@media screen and (min-width: 2560px) {
+  /* Footer */
+  #footer {
+    padding: 2rem 16rem;
+  }
+
+  .footer__mailto {
+    padding: 4rem;
+    border-radius: 2rem;
+  }
+
+  .footer__mailto h2,
+  p {
+    font-size: 2rem;
+  }
+
+  .footer__mailto a {
+    font-size: 2rem;
+  }
+
+  .footer__info p {
+    font-size: 2rem;
+  }
+
+  .footer__info p:first-child {
+    font-size: 2.5rem;
+  }
+
+  .footer__info ul li a img {
+    width: 3rem;
+    height: 3rem;
   }
 }
