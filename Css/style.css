@@ -27,180 +27,132 @@ html {
 }
 
 body {
-  overflow: hidden;
   width: 100%;
   font-size: 16px;
-  background-color: #021b2b;
 }
 
 input[type='checkbox'] {
   display: none;
 }
 
-.btn {
-  font-size: 1rem;
-  margin: 10px auto;
-  padding: 10px 20px;
-  border-radius: 20px;
-  transition: 0.5s;
-  color: #fff;
-  border: 1px solid #fff;
-  box-shadow: 0px 0px 10px #000;
-}
-
-.btn:hover {
-  cursor: pointer;
-  background-color: #fff;
-  color: #144ccb;
-}
-
-/* Estilos Header */
-#header {
-  height: 20px;
-  background-color: #021b2b;
-}
-
-#label {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  cursor: pointer;
-  position: fixed;
-  top: 10px;
-  right: 10px;
-  width: 50px;
-  height: 50px;
-  font-size: 1.5rem;
-  transition: 0.5s;
-  z-index: 2;
-  color: #fff;
-}
-
-#label:hover {
-  border-radius: 50%;
-  background-color: #fff;
-  color: #021b2b;
-}
-
 .abrir {
   display: block;
-  opacity: 1;
-  transition: 0.5s;
 }
 
 .cerrar {
   display: none;
-  opacity: 0;
-  transition: 0.5s;
 }
 
-#checkbox {
-  display: none;
+/* Estilos Header */
+#label {
+  position: fixed;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.5s ease;
+  top: 10px;
+  right: 10px;
+  width: 40px;
+  height: 40px;
+  font-size: 1.2rem;
+  z-index: 2;
+  color: var(--color4);
 }
 
 #checkbox:checked ~ #label .cerrar {
   display: block;
+  transition: all 0.5s ease;
   opacity: 1;
-  transition: 0.5s;
 }
 
 #checkbox:checked ~ #label .abrir {
   display: none;
+  transition: all 0.5s ease;
   opacity: 0;
-  transition: 0.5s;
 }
 
-#checkbox:checked ~ .header-nav {
+#checkbox:checked ~ .navbar {
   right: 0px;
-  transition: 0.5s;
+  transition: all 0.5s ease;
 }
 
-.header-nav {
+.navbar {
   position: fixed;
+  transition: all 0.5s ease;
   top: 0px;
   right: -100%;
   width: 100%;
   height: 100vh;
-  transition: 0.5s;
   z-index: 1;
-  background-color: #021b2b;
+  background-color: var(--color1);
 }
 
-.header-nav-ul {
+.navbar__list {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   height: 100%;
-  gap: 20px;
+  gap: 2rem;
 }
 
-.header-nav-ul li a {
-  font-size: 1.5rem;
-  transition: 0.5s;
-  color: #fff;
-}
-
-.header-nav-ul li a:hover {
-  color: #aaa;
-}
-
-/* Estilos Main */
-#main {
-  width: 100%;
+.navbar__list__item a {
+  text-transform: uppercase;
+  transition: all 0.5s ease;
+  font-size: 1.2rem;
+  color: var(--color4);
 }
 
 /* Main Inicio */
-#main .main-inicio {
+.inicio {
   text-align: center;
-  padding: 20px;
-  color: #fff;
-  background-color: #021b2b;
+  padding: 1rem;
+  color: var(--color4);
+  background-color: var(--color1);
 }
 
-#main .main-inicio-img {
+.inicio__img img {
   display: none;
 }
 
-#main .main-inicio-texto {
+.inicio__texto {
   display: flex;
-  justify-content: center;
-  align-items: center;
   flex-direction: column;
 }
 
-#main .main-inicio-texto h1 {
-  font-size: 2.5rem;
+.inicio__texto h1 {
+  font-size: 1.5rem;
 }
 
-#main .main-inicio-texto h2 {
+.inicio__texto h2 {
   font-size: 1rem;
 }
 
 /* Main Conoce Nicaragua */
-#main .main-conoceNic {
-  padding: 20px;
-  color: #021b2b;
-  background-color: #f1ebeb;
+.conoceNic {
+  padding: 2rem;
+  color: var(--color1);
+  background-color: var(--color4);
 }
 
-#main .main-conoceNic h2 {
+.conoceNic h2 {
   text-align: center;
-  font-size: 1.5rem;
-  margin-bottom: 10px;
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
 }
 
-#main .main-conoceNic-video {
+.conoceNic__video {
   display: flex;
   justify-content: center;
 }
 
-#main .main-conoceNic video {
+.conoceNic__video video {
   object-fit: cover;
-  width: 80%;
-  height: 80%;
+  width: 90%;
+  height: 90%;
   border-radius: 20px;
-  box-shadow: 0px 0px 10px #000;
+  box-shadow: 1rem 0.5rem 0.5rem var(--color5);
 }
 
 /* Main Turismo */
@@ -646,7 +598,7 @@ input[type='checkbox'] {
   border-radius: 0 0 1rem 1rem;
   color: var(--color4);
   background-color: var(--color1);
-  box-shadow: 5px 5px 10px var(--color1);
+  box-shadow: 0rem 0.5rem 1rem var(--color1);
 }
 
 .footer__mailto h2,

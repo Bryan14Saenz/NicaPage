@@ -32,20 +32,26 @@
         <span class="abrir">&#9776;</span>
         <span class="cerrar">&#10006;</span>
       </label>
-      <nav class="header-nav">
-        <ul class="header-nav-ul">
-          <li class="header-nav-ul-li"><a href="index.html">Inicio</a></li>
-          <li class="header-nav-ul-li"><a href="#main-turismo">Turismo</a></li>
-          <li class="header-nav-ul-li">
+
+      <!-- Navbar -->
+      <nav class="navbar">
+        <ul class="navbar__list">
+          <li class="navbar__list__item">
+            <a href="index.html">Inicio</a>
+          </li>
+          <li class="navbar__list__item">
+            <a href="#main-turismo">Turismo</a>
+          </li>
+          <li class="navbar__list__item">
             <a href="#main-gastronomía">Gastronomía</a>
           </li>
-          <li class="header-nav-ul-li">
+          <li class="navbar__list__item">
             <a href="#main-historia">Historia</a>
           </li>
-          <li class="header-nav-ul-li">
+          <li class="navbar__list__item">
             <a href="#main-curiosidades">Curiosidades</a>
           </li>
-          <li class="header-nav-ul-li">
+          <li class="navbar__list__item">
             <a href="#footer">Contacto</a>
           </li>
         </ul>
@@ -53,34 +59,36 @@
     </header>
 
     <!-- Main -->
-    <main id="main" class="aparecer">
+    <main id="main">
       <!-- Inicio -->
-      <section class="main-inicio">
-        <div class="main-inicio-img">
+      <section class="inicio">
+        <div class="inicio__img">
           <img
             src="Assets/Img/CollageNicaragua.png"
             alt="Colección de fotos de Nicaragua"
             loading="lazy"
           />
         </div>
-        <div class="main-inicio-texto">
-          <h1>Bienvenido a Nicaragua</h1>
+        <div class="inicio__texto">
+          <h1>Bienvenido a Nicaragua</h>
           <h2>Conoce un poco sobre este hermoso país</h2>
         </div>
       </section>
+
       <!-- Conoce Nicaragua (Video) -->
-      <section class="main-conoceNic">
+      <section class="conoceNic">
         <h2>Conoce a Nicaragua a través de un video</h2>
-        <div class="main-conoceNic-video">
-          <video
+          <picture class="conoceNic__video">
+            <video
             src="Assets/video/Nicaragua Video.mp4"
             loading="lazy"
             muted
             autoplay
-            loop
-          ></video>
-        </div>
+            loop>
+            </video>
+          </picture>
       </section>
+
       <!-- Turismo -->
       <section id="main-turismo">
         <h2>Turismo</h2>
@@ -411,6 +419,7 @@
         </div>
         <label for="check-Turismo" class="btn">Ver Mas</label>
       </section>
+
       <!-- Gastronomía -->
       <section id="main-gastronomía">
         <h2>Gastronomía</h2>
@@ -571,6 +580,7 @@
         </div>
         <label for="check-Gastronomía" class="btn">Ver Mas</label>
       </section>
+
       <!-- Historia -->
       <section id="main-historia">
         <h2>Historia</h2>
@@ -841,6 +851,7 @@
         </div>
         <label for="check-Historia" class="btn">Ver Mas</label>
       </section>
+
       <!-- Curiosidades -->
       <section id="main-curiosidades">
         <section class="main-curiosidades-accordion">
