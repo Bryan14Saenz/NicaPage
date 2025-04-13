@@ -125,7 +125,7 @@ input[type='checkbox'] {
   color: var(--color4);
 }
 
-/* Main Inicio */
+/* Inicio */
 .inicio {
   text-align: center;
   padding: 1rem;
@@ -389,66 +389,36 @@ input[type='checkbox'] {
 }
 
 /* Estilos Curiosidades */
-#main-curiosidades {
+#curiosidades {
   text-align: center;
-  margin-bottom: 20px;
-  padding: 20px;
-  color: #021b2b;
-  background-color: #fff;
+  padding: 1rem;
+  color: var(--color1);
+  background-color: var(--color4);
 }
 
-#main-curiosidades label {
-  color: #144ccb;
+.curiosidades__accordion {
+  margin-bottom: 1rem;
 }
 
-#main-curiosidades label:hover {
-  border: none;
-  color: #fff;
-  background-color: #021b2b;
-}
-
-.main-curiosidades-accordion {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  margin-bottom: 20px;
-  border-radius: 5px;
-}
-
-.main-curiosidades-accordion h2 {
-  text-align: center;
-  font-size: 1.5rem;
-}
-
-.main-curiosidades-accordion p {
-  text-align: center;
-  font-size: 1rem;
-  margin-bottom: 20px;
-}
-
-.main-curiosidades-accordion .accordion {
+.accordion {
   overflow: hidden;
 }
 
-.main-curiosidades-accordion .accordion-item {
+.accordion__item {
   cursor: pointer;
-  padding: 10px;
-  margin-bottom: 10px;
-  border-radius: 5px;
-  transition: 0.5s;
-  color: #fff;
-  background-color: #021b2b;
+  transition: all 0.5s ease;
+  padding: 0.8rem 1rem;
+  margin-bottom: 1rem;
+  border-radius: 1rem;
+  color: var(--color4);
+  background-color: var(--color1);
 }
 
-.main-curiosidades-accordion .accordion-item:hover {
-  background-color: #144ccb;
-}
-
-.main-curiosidades-accordion .accordion-item-header {
+.accordion__item__header {
   padding: 10px;
 }
 
-.main-curiosidades-accordion .accordion-item-header button {
+.accordion__item__header button {
   border: none;
   width: 100%;
   font-size: 1rem;
@@ -458,28 +428,6 @@ input[type='checkbox'] {
   color: #fff;
   background-color: #144ccb;
   box-shadow: 0px 0px 10px #000;
-}
-
-.main-curiosidades-accordion .accordion-item:hover .accordion-item-header button {
-  cursor: pointer;
-  background-color: #fff;
-  color: #144ccb;
-}
-
-.main-curiosidades-accordion .accordion-item-collapse {
-  opacity: 0;
-  height: 0px;
-  overflow: hidden;
-  transition: 0.5s;
-}
-
-.main-curiosidades-accordion .accordion-item:hover .accordion-item-collapse {
-  animation: fadeIn 0.5s linear;
-  animation-fill-mode: forwards;
-}
-
-#main-curiosidades .btn:hover {
-  border: 1px solid #fff;
 }
 
 #check-Curiosidades:not(:checked)~.oculto {
@@ -494,8 +442,8 @@ input[type='checkbox'] {
 #footer {
   text-align: center;
   padding-bottom: 1rem;
-  color: var(--color5);
-  background-color: var(--color4);
+  color: var(--color4);
+  background-color: var(--color1);
 }
 
 .footer__mailto {
@@ -508,8 +456,8 @@ input[type='checkbox'] {
   margin-bottom: 1rem;
   border-radius: 0 0 1rem 1rem;
   color: var(--color4);
-  background-color: var(--color1);
-  box-shadow: 0rem 0.5rem 1rem var(--color1);
+  background-color: var(--color2);
+  box-shadow: 0rem 0.5rem 1rem var(--color5);
 }
 
 .footer__mailto h2,
@@ -532,6 +480,10 @@ p {
 
 .footer__info p:first-child {
   font-size: 1.2rem;
+}
+
+.footer__info p span {
+  text-decoration: underline;
 }
 
 .footer__info ul {
@@ -592,22 +544,57 @@ p {
     max-width: 60%;
   }
 
-  /* Turismo & Gastronomía */
+  /* Turismo & Gastronomía & Historia */
   #turismo .btn,
-  #gastronomía .btn {
+  #gastronomía .btn,
+  #historia .btn,
+  #curiosidades .btn {
     display: none;
   }
 
   .turismo__cards,
-  .gastronomía__cards {
+  .gastronomía__cards,
+  .historia__cards {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 1rem;
   }
 
   #check-Turismo:not(:checked)~.oculto,
-  #check-Gastronomía:not(:checked)~.oculto {
+  #check-Gastronomía:not(:checked)~.oculto,
+  #check-Historia:not(:checked)~.oculto,
+  #check-Curiosidades:not(:checked)~.oculto {
     display: block;
+  }
+
+  /* Curiosidades */
+  #curiosidades h2 {
+    font-size: 2rem;
+  }
+
+  #curiosidades p {
+    font-size: 1.2rem;
+  }
+
+  .accordion {
+    max-width: 80%;
+    margin: 0 auto;
+  }
+
+  .accordion__item__header button {
+    font-size: 1.2rem;
+  }
+
+  .accordion__item__collapse {
+    overflow: hidden;
+    transition: all 0.5s ease;
+    interpolate-size: allow-keywords;
+    height: 0;
+    font-size: 1.2rem;
+  }
+
+  .accordion__item:hover .accordion__item__collapse {
+    height: auto;
   }
 
   /* Footer */
@@ -621,7 +608,13 @@ p {
   }
 
   .footer__mailto a {
+    transition: all 0.5s ease;
     font-size: 1.2rem;
+  }
+
+  .footer__mailto a:hover {
+    color: var(--color2);
+    background-color: var(--color4);
   }
 
   .footer__info p {
@@ -633,8 +626,14 @@ p {
   }
 
   .footer__info ul li a img {
+    object-fit: cover;
+    transition: all 0.5s ease;
     width: 2rem;
     height: 2rem;
+  }
+
+  .footer__info ul li a img:hover {
+    transform: scale(1.2);
   }
 }
 
@@ -665,22 +664,47 @@ p {
     max-width: 50%;
   }
 
-  /* Turismo & Gastronomía */
+  /* Turismo & Gastronomía & Historia */
   #turismo h2,
-  #gastronomía h2 {
+  #gastronomía h2,
+  #historia h2 {
     font-size: 2rem;
   }
 
   #turismo p,
-  #gastronomía p {
+  #gastronomía p,
+  #historia p {
     font-size: 1.5rem;
   }
 
   .turismo__cards,
-  .gastronomía__cards {
+  .gastronomía__cards,
+  .historia__cards {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 1rem;
+  }
+
+  /* Curiosidades */
+  #curiosidades h2 {
+    font-size: 3rem;
+  }
+
+  #curiosidades p {
+    font-size: 1.8rem;
+  }
+
+  .accordion {
+    max-width: 80%;
+    margin: 0 auto;
+  }
+
+  .accordion__item__header button {
+    font-size: 1.5rem;
+  }
+
+  .accordion__item__collapse {
+    font-size: 1.5rem;
   }
 
   /* Footer */
@@ -738,14 +762,16 @@ p {
     max-width: 40%;
   }
 
-  /* Turismo & Gastronomía */
+  /* Turismo & Gastronomía & Historia */
   #turismo h2,
-  #gastronomía h2 {
+  #gastronomía h2,
+  #historia h2 {
     font-size: 2.5rem;
   }
 
   #turismo p,
-  #gastronomía p {
+  #gastronomía p,
+  #historia p {
     font-size: 2rem;
   }
 
@@ -758,6 +784,28 @@ p {
 
   .turismo__cards__ciudades {
     height: 350px;
+  }
+
+  /* Curiosidades */
+  #curiosidades h2 {
+    font-size: 4rem;
+  }
+
+  #curiosidades p {
+    font-size: 2.5rem;
+  }
+
+  .accordion {
+    max-width: 80%;
+    margin: 0 auto;
+  }
+
+  .accordion__item__header button {
+    font-size: 2.5rem;
+  }
+
+  .accordion__item__collapse {
+    font-size: 2.5rem;
   }
 
   /* Footer */
