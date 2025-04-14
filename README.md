@@ -41,7 +41,4 @@ El sitio se divide en las siguientes secciones:
 
 “Programa no para resolver problemas, sino para crear soluciones.”
 
-- GitHub
-- LinkedIn
-- Facebook
 - Correo: 14bryansaenz@gmail.com
