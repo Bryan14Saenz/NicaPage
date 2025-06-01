@@ -1,0 +1,262 @@
+/* Reset */
+* {
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: cursive;
+  margin: 0px;
+  padding: 0px;
+}
+
+/* Variables */
+:root {
+  --color1: #021b2b;
+  --color2: #144ccb;
+  --color3: #aaaaaa;
+  --color4: #ffffff;
+  --color5: #000000;
+}
+
+/* Estilos Generales */
+html {
+  scroll-behavior: smooth;
+  scrollbar-width: thin;
+  scrollbar-color: #144ccb #021b2b;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+
+body {
+  width: 100%;
+  font-size: 16px;
+}
+
+input[type="checkbox"] {
+  display: none;
+}
+
+.btn {
+  padding: 0.5rem 1rem;
+  border-radius: 1rem;
+  color: var(--color5);
+  border: 1px solid var(--color5);
+  background-color: var(--color3);
+}
+
+.abrir {
+  display: block;
+}
+
+.cerrar {
+  display: none;
+}
+
+/* Estilos Navbar */
+#label {
+  cursor: pointer;
+  position: fixed;
+  transition: all 1s ease;
+  font-size: 1.5rem;
+  top: 1rem;
+  right: 1rem;
+  z-index: 2;
+  color: var(--color4);
+}
+
+#checkbox:checked ~ #label .cerrar {
+  display: block;
+  transition: all 1s ease;
+  opacity: 1;
+}
+
+#checkbox:checked ~ #label .abrir {
+  display: none;
+  transition: all 1s ease;
+  opacity: 0;
+}
+
+#checkbox:checked ~ .navbar {
+  right: 0px;
+  transition: all 1s ease;
+}
+
+.navbar {
+  position: fixed;
+  transition: all 1s ease;
+  top: 0px;
+  right: -100%;
+  width: 100%;
+  height: 100vh;
+  z-index: 1;
+  background-color: var(--color1);
+}
+
+.navbar__list {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  gap: 2rem;
+}
+
+.navbar__list__item a {
+  text-transform: uppercase;
+  transition: all 1s ease;
+  font-size: 1.2rem;
+  color: var(--color4);
+}
+
+/* Estilos Inicio */
+.inicio {
+  text-align: center;
+  padding: 1rem;
+  color: var(--color4);
+  background-color: var(--color1);
+}
+
+.inicio__img img {
+  display: none;
+}
+
+.inicio__texto h1 {
+  font-size: 1.5rem;
+}
+
+.inicio__texto h2 {
+  font-size: 0.9rem;
+}
+
+/* Main Conoce Nicaragua */
+.conoceNic {
+  padding: 1.5rem;
+}
+
+.conoceNic h2 {
+  text-align: center;
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+.conoceNic__video {
+  display: flex;
+  justify-content: center;
+}
+
+.conoceNic__video video {
+  object-fit: cover;
+  width: 90%;
+  border-radius: 20px;
+  box-shadow: 1rem 0.5rem 0.5rem var(--color5);
+}
+
+/* Estilos Curiosidades */
+#curiosidades {
+  text-align: center;
+  padding: 1rem;
+  background-color: var(--color4);
+  color: var(--color1);
+}
+
+#curiosidades h2,
+p {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+#curiosidades p {
+  font-size: 1rem;
+}
+
+.curiosidades__container {
+  display: flex;
+  flex-direction: column;
+  text-align: start;
+  gap: 1rem;
+  margin: 1rem auto;
+  padding: 0.5rem 0;
+}
+
+.container__item {
+  background-color: var(--color4);
+}
+
+.container__item details {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 0.5rem;
+  border-top: 2px solid var(--color1);
+  box-shadow: 0rem 0.5rem 1rem var(--color1);
+}
+
+.container__item details summary {
+  font-weight: bold;
+  font-size: 1.2rem;
+  color: var(--color1);
+}
+
+#check-curiosidades:not(:checked)~.oculto {
+  display: none;
+}
+
+#check-curiosidades:checked~.oculto {
+  display: block;
+}
+
+/* Estilos Footer */
+#footer {
+  text-align: center;
+  padding-bottom: 1.5rem;
+}
+
+.footer__mailto {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem 0;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border-radius: 0 0 2.5rem 2.5rem;
+  color: var(--color4);
+  background-color: var(--color1);
+  box-shadow: 0rem 0.5rem 1rem var(--color1);
+}
+
+.footer__mailto h2,
+p {
+  font-size: 1rem;
+}
+
+.footer__mailto a {
+  font-size: 1rem;
+  padding: 0.5rem 1rem;
+  border-radius: 2rem;
+  border: 1px solid var(--color4);
+  color: var(--color4);
+}
+
+.footer__info p {
+  font-size: 1rem;
+}
+
+.footer__info p:first-child {
+  font-size: 1.2rem;
+}
+
+.footer__info p span {
+  text-decoration: underline;
+}
+
+.footer__info ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+  gap: 2rem;
+  margin: 1rem 0;
+}
+
+.footer__info ul li a img {
+  object-fit: cover;
+  width: 1.8rem;
+}
