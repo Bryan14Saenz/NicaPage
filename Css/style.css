@@ -9,11 +9,11 @@
 
 /* Variables */
 :root {
-  --color1: #021b2b;
-  --color2: #144ccb;
-  --color3: #aaaaaa;
-  --color4: #ffffff;
-  --color5: #000000;
+  --color1: #000000;
+  --color2: #ffffff;
+  --color3: #021b2b;
+  --color4: #2a56bb;
+  --color5: #aaaaaa;
 }
 
 /* Estilos Generales */
@@ -25,11 +25,6 @@ html {
   overflow-y: scroll;
 }
 
-body {
-  width: 100%;
-  font-size: 16px;
-}
-
 input[type="checkbox"] {
   display: none;
 }
@@ -39,7 +34,6 @@ input[type="checkbox"] {
   border-radius: 1rem;
   color: var(--color5);
   border: 1px solid var(--color5);
-  background-color: var(--color3);
 }
 
 .abrir {
@@ -59,7 +53,7 @@ input[type="checkbox"] {
   top: 1rem;
   right: 1rem;
   z-index: 2;
-  color: var(--color4);
+  color: var(--color5);
 }
 
 #checkbox:checked ~ #label .cerrar {
@@ -75,8 +69,8 @@ input[type="checkbox"] {
 }
 
 #checkbox:checked ~ .navbar {
-  right: 0px;
   transition: all 1s ease;
+  right: 0px;
 }
 
 .navbar {
@@ -103,14 +97,14 @@ input[type="checkbox"] {
   text-transform: uppercase;
   transition: all 1s ease;
   font-size: 1.2rem;
-  color: var(--color4);
+  color: var(--color2);
 }
 
 /* Estilos Inicio */
 .inicio {
   text-align: center;
   padding: 1rem;
-  color: var(--color4);
+  color: var(--color2);
   background-color: var(--color1);
 }
 
@@ -146,19 +140,258 @@ input[type="checkbox"] {
   object-fit: cover;
   width: 90%;
   border-radius: 20px;
-  box-shadow: 1rem 0.5rem 0.5rem var(--color5);
+  box-shadow: 1rem 0.5rem 0.5rem var(--color1);
+}
+
+/* Estilos Turismo */
+#turismo {
+  text-align: center;
+  padding: 1rem;
+  color: var(--color1);
+}
+
+#turismo h2 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+#turismo p {
+  font-size: 1rem;
+}
+
+.turismo__cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  margin-bottom: 1rem;
+}
+
+.turismo__cards__ciudades {
+  transition: all 0.5s ease;
+  height: 250px;
+  margin: 1rem;
+  border-radius: 1rem;
+  color: var(--color2);
+  background-size: cover;
+  background-position: center;
+  box-shadow: 1rem 1rem 0.5rem var(--color5);
+}
+
+.managua {
+  background-image: url("/Assets/Img/managua.png");
+}
+
+.granada {
+  background-image: url("/Assets/Img/granada.png");
+}
+
+.leon {
+  background-image: url("/Assets/Img/leon.png");
+}
+
+.sanJuan {
+  background-image: url("/Assets/Img/sanJuan.png");
+}
+
+.ometepe {
+  background-image: url("/Assets/Img/ometepe.png");
+}
+
+.cornIsland {
+  background-image: url("/Assets/Img/cornIsland.png");
+}
+
+.masaya {
+  background-image: url("/Assets/Img/masaya.png");
+}
+
+.esteli {
+  background-image: url("/Assets/Img/esteli.png");
+}
+
+.rioSanJuan {
+  background-image: url("/Assets/Img/rioSanJuan.png");
+}
+
+.matagalpa {
+  background-image: url("/Assets/Img/matagalpa.png");
+}
+
+.bluefields {
+  background-image: url("/Assets/Img/bluefields.png");
+}
+
+.turismo__cards__ciudades-mostar {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  gap: 1rem;
+  border-radius: 1rem;
+  background-color: #00000080;
+}
+
+.turismo__cards__ciudades-mostar h3 {
+  font-size: 1.2rem;
+  text-decoration: underline;
+}
+
+.turismo__cards__ciudades-mostar ul {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.turismo__cards__ciudades-mostar ul li {
+  list-style: disc;
+}
+
+.turismo__cards__ciudades-mostar ul li a {
+  font-size: 1rem;
+  color: var(--color2);
+}
+
+.turismo__cards__ciudades-mostar ul li a:active {
+  color: var(--color2);
+}
+
+#check-Turismo:not(:checked) ~ .oculto {
+  display: none;
+}
+
+#check-Turismo:checked ~ .oculto {
+  display: block;
+}
+
+/* Estilos Gastronomía */
+#gastronomía {
+  text-align: center;
+  padding: 1rem;
+  color: var(--color3);
+}
+
+#gastronomía h2 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+#gastronomía p {
+  font-size: 1rem;
+}
+
+.gastronomía__cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.gastronomía__card__item {
+  padding: 1rem;
+  border-radius: 1rem;
+  color: var(--color2);
+  background-color: var(--color3);
+  box-shadow: 1rem 1rem 0.5rem var(--color5);
+}
+
+.gastronomía__card__item-mostrar img {
+  object-fit: cover;
+  width: 200px;
+  height: 150px;
+  margin: 0.5rem 0;
+  border-radius: 5px;
+}
+
+.gastronomía__card__item-mostrar p {
+  text-align: center;
+  font-size: 1rem;
+  margin: 0.5rem 0;
+}
+
+#check-Gastronomía:not(:checked) ~ .oculto {
+  display: none;
+}
+
+#check-Gastronomía:checked ~ .oculto {
+  display: block;
+}
+
+/* Estilos Historia */
+#historia {
+  text-align: center;
+  padding: 1rem;
+  color: var(--color3);
+}
+
+#historia h2 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+#historia p {
+  font-size: 1rem;
+}
+
+.historia__cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.historia__card__item {
+  padding: 1rem;
+  margin: 1rem 0;
+  border-radius: 1rem;
+  box-shadow: 1rem 1rem 0.5rem var(--color5);
+}
+
+.historia__card__item h3 {
+  font-size: 1.2rem;
+  margin: 0.5rem 0;
+}
+
+.historia__card__item-mostrar {
+  margin: 1rem 0;
+}
+
+.historia__card__item__img img {
+  object-fit: cover;
+  height: auto;
+  width: 100%;
+  border-radius: 1rem;
+}
+
+.historia__card__item__texto {
+  text-align: left;
+  overflow-y: scroll;
+  height: 150px;
+  margin: 1rem 0;
+  padding: 0 1rem;
+}
+
+.historia__card__item__texto p {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+#check-historia:not(:checked) ~ .oculto {
+  display: none;
+}
+
+#check-historia:checked ~ .oculto {
+  display: block;
 }
 
 /* Estilos Curiosidades */
 #curiosidades {
   text-align: center;
   padding: 1rem;
-  background-color: var(--color4);
-  color: var(--color1);
+  color: var(--color3);
 }
 
-#curiosidades h2,
-p {
+#curiosidades h2 {
   font-size: 1.5rem;
   margin-bottom: 0.5rem;
 }
@@ -176,30 +409,29 @@ p {
   padding: 0.5rem 0;
 }
 
-.container__item {
-  background-color: var(--color4);
-}
-
 .container__item details {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
   padding: 0.5rem;
-  border-top: 2px solid var(--color1);
-  box-shadow: 0rem 0.5rem 1rem var(--color1);
+  border-radius: 0.5rem;
+  border: 1px solid var(--color5);
+  border-top: 4px solid var(--color3);
 }
 
 .container__item details summary {
   font-weight: bold;
   font-size: 1.2rem;
-  color: var(--color1);
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  color: var(--color3);
 }
 
-#check-curiosidades:not(:checked)~.oculto {
+#check-curiosidades:not(:checked) ~ .oculto {
   display: none;
 }
 
-#check-curiosidades:checked~.oculto {
+#check-curiosidades:checked ~ .oculto {
   display: block;
 }
 
@@ -217,9 +449,9 @@ p {
   padding: 1rem;
   margin-bottom: 1rem;
   border-radius: 0 0 2.5rem 2.5rem;
-  color: var(--color4);
+  color: var(--color2);
   background-color: var(--color1);
-  box-shadow: 0rem 0.5rem 1rem var(--color1);
+  box-shadow: 0rem 0.5rem 1rem var(--color3);
 }
 
 .footer__mailto h2,
@@ -231,8 +463,8 @@ p {
   font-size: 1rem;
   padding: 0.5rem 1rem;
   border-radius: 2rem;
-  border: 1px solid var(--color4);
-  color: var(--color4);
+  border: 1px solid var(--color2);
+  color: var(--color2);
 }
 
 .footer__info p {
@@ -260,3 +492,158 @@ p {
   object-fit: cover;
   width: 1.8rem;
 }
+
+/* Media Queries */
+/* Mobile M */
+@media screen and (min-width: 375px) {
+  /* Estilo Globales */
+  .btn {
+    padding: 0.6rem 1.1rem;
+    border-radius: 1rem;
+  }
+
+  /* Estilos Navbar */
+  #label {
+    font-size: 1.6rem;
+    top: 1.1rem;
+    right: 1.1rem;
+  }
+
+  .navbar__list__item a {
+    font-size: 1.3rem;
+  }
+
+  /* Estilos Inicio */
+  .inicio__texto h1 {
+    font-size: 1.6rem;
+  }
+
+  .inicio__texto h2 {
+    font-size: 1rem;
+  }
+
+  /* Conoce Nicaragua */
+  .conoceNic h2 {
+    font-size: 1.3rem;
+  }
+
+  /* Estilos Turismo */
+  #turismo h2 {
+    font-size: 1.6rem;
+  }
+
+  #turismo p {
+    font-size: 1.1rem;
+  }
+
+  .turismo__cards__ciudades-mostar h3 {
+    font-size: 1.3rem;
+  }
+
+  .turismo__cards__ciudades-mostar ul li a {
+    font-size: 1.1rem;
+  }
+
+  /* Estilos Gastronomía */
+  #gastronomía h2 {
+    font-size: 1.6rem;
+  }
+
+  #gastronomía p {
+    font-size: 1.1rem;
+  }
+
+  .gastronomía__card__item-mostrar p {
+    font-size: 1.1rem;
+  }
+
+  /* Estilos Historia */
+  #historia h2 {
+    font-size: 1.6rem;
+  }
+
+  #historia p {
+    font-size: 1.1rem;
+  }
+
+  .historia__card__item h3 {
+    font-size: 1.3rem;
+  }
+
+  .historia__card__item__texto p {
+    font-size: 1.1rem;
+    line-height: 1.5;
+  }
+
+  /* Estilos Curiosidades */
+  #curiosidades h2 {
+    font-size: 1.6rem;
+  }
+
+  #curiosidades p {
+    font-size: 1.1rem;
+  }
+
+  .container__item details summary {
+    font-size: 1.3rem;
+  }
+
+  /* Estilos Footer */
+  .footer__mailto h2,
+  p {
+    font-size: 1.1rem;
+  }
+
+  .footer__mailto a {
+    font-size: 1.1rem;
+  }
+
+  .footer__info p {
+    font-size: 1.1rem;
+  }
+
+  .footer__info p:first-child {
+    font-size: 1.3rem;
+  }
+
+  .footer__info ul li a img {
+    object-fit: cover;
+    width: 1.9rem;
+  }
+}
+
+/* Mobile L */
+@media screen and (min-width: 425px) {
+}
+
+/* Tablet */
+@media screen and (min-width: 768px) {
+}
+
+/* Laptop  */
+@media screen and (min-width: 1024px) {
+}
+
+/* Laptop L */
+@media screen and (min-width: 1440px) {
+}
+
+/* 4K */
+@media screen and (min-width: 2560px) {
+}
+
+/* .turismo__cards__ciudades-mostar {
+  display: none;
+}
+
+.turismo__cards__ciudades:hover .turismo__cards__ciudades-mostar {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  gap: 1rem;
+  border-radius: 1rem;
+  background-color: #00000080;
+} */
