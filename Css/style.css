@@ -30,6 +30,7 @@ input[type="checkbox"] {
 }
 
 .btn {
+  margin-bottom: 1rem;
   padding: 0.5rem 1rem;
   border-radius: 1rem;
   color: var(--color5);
@@ -284,7 +285,8 @@ input[type="checkbox"] {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 1rem;
-  margin-bottom: 1rem;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
 }
 
 .gastronomía__card__item {
@@ -292,7 +294,6 @@ input[type="checkbox"] {
   border-radius: 1rem;
   color: var(--color2);
   background-color: var(--color3);
-  box-shadow: 1rem 1rem 0.5rem var(--color5);
 }
 
 .gastronomía__card__item-mostrar img {
@@ -438,6 +439,7 @@ input[type="checkbox"] {
 /* Estilos Footer */
 #footer {
   text-align: center;
+  margin-top: 1rem;
   padding-bottom: 1.5rem;
 }
 
@@ -499,7 +501,6 @@ p {
   /* Estilo Globales */
   .btn {
     padding: 0.6rem 1.1rem;
-    border-radius: 1rem;
   }
 
   /* Estilos Navbar */
@@ -584,6 +585,10 @@ p {
     font-size: 1.1rem;
   }
 
+  .container__item details {
+    font-size: 1rem;
+  }
+
   .container__item details summary {
     font-size: 1.3rem;
   }
@@ -614,36 +619,737 @@ p {
 
 /* Mobile L */
 @media screen and (min-width: 425px) {
+  /* Estilo Globales */
+  .btn {
+    padding: 0.7rem 1.2rem;
+  }
+
+  /* Estilos Navbar */
+  #label {
+    font-size: 1.7rem;
+    top: 1.2rem;
+    right: 1.2rem;
+  }
+
+  .navbar__list__item a {
+    font-size: 1.4rem;
+  }
+
+  /* Estilos Inicio */
+  .inicio__texto h1 {
+    font-size: 1.7rem;
+  }
+
+  .inicio__texto h2 {
+    font-size: 1.1rem;
+  }
+
+  /* Conoce Nicaragua */
+  .conoceNic h2 {
+    font-size: 1.4rem;
+  }
+
+  /* Estilos Turismo */
+  #turismo h2 {
+    font-size: 1.7rem;
+  }
+
+  #turismo p {
+    font-size: 1.2rem;
+  }
+
+  .turismo__cards__ciudades-mostar h3 {
+    font-size: 1.4rem;
+  }
+
+  .turismo__cards__ciudades-mostar ul li a {
+    font-size: 1.2rem;
+  }
+
+  /* Estilos Gastronomía */
+  #gastronomía h2 {
+    font-size: 1.7rem;
+  }
+
+  #gastronomía p {
+    font-size: 1.1rem;
+  }
+
+  .gastronomía__card__item-mostrar p {
+    font-size: 1.2rem;
+  }
+
+  /* Estilos Historia */
+  #historia h2 {
+    font-size: 1.7rem;
+  }
+
+  #historia p {
+    font-size: 1.2rem;
+  }
+
+  .historia__card__item h3 {
+    font-size: 1.4rem;
+  }
+
+  .historia__card__item__texto p {
+    font-size: 1.2rem;
+    line-height: 1.5;
+  }
+
+  /* Estilos Curiosidades */
+  #curiosidades h2 {
+    font-size: 1.7rem;
+  }
+
+  #curiosidades p {
+    font-size: 1.2rem;
+  }
+
+  .container__item details {
+    font-size: 1.2rem;
+  }
+
+  .container__item details summary {
+    font-size: 1.4rem;
+  }
+
+  /* Estilos Footer */
+  .footer__mailto h2,
+  p {
+    font-size: 1.2rem;
+  }
+
+  .footer__mailto a {
+    font-size: 1.2rem;
+  }
+
+  .footer__info p {
+    font-size: 1.2rem;
+  }
+
+  .footer__info p:first-child {
+    font-size: 1.4rem;
+  }
+
+  .footer__info ul li a img {
+    object-fit: cover;
+    width: 2rem;
+  }
 }
 
 /* Tablet */
 @media screen and (min-width: 768px) {
+  /* Estilo Globales */
+  .btn {
+    padding: 0.8rem 1.3rem;
+  }
+
+  /* Estilos Navbar */
+  #label {
+    font-size: 1.8rem;
+    top: 1.3rem;
+    right: 1.3rem;
+  }
+
+  .navbar__list__item a {
+    font-size: 1.5rem;
+  }
+
+  /* Estilos Inicio */
+  .inicio__texto h1 {
+    font-size: 1.8rem;
+  }
+
+  .inicio__texto h2 {
+    font-size: 1.2rem;
+  }
+
+  /* Conoce Nicaragua */
+  .conoceNic h2 {
+    font-size: 1.5rem;
+  }
+
+  .conoceNic__video video {
+    width: 80%;
+  }
+
+  /* Estilos Turismo */
+  #turismo h2 {
+    font-size: 1.8rem;
+  }
+
+  #turismo p {
+    font-size: 1.3rem;
+  }
+
+  .turismo__cards__ciudades-mostar h3 {
+    font-size: 1.5rem;
+  }
+
+  .turismo__cards__ciudades-mostar ul li a {
+    font-size: 1.3rem;
+  }
+
+  /* Estilos Gastronomía */
+  #gastronomía h2 {
+    font-size: 1.8rem;
+  }
+
+  #gastronomía p {
+    font-size: 1.2rem;
+  }
+
+  .gastronomía__card__item-mostrar p {
+    font-size: 1.3rem;
+  }
+
+  /* Estilos Historia */
+  #historia h2 {
+    font-size: 1.8rem;
+  }
+
+  #historia p {
+    font-size: 1.3rem;
+  }
+
+  .historia__card__item h3 {
+    font-size: 1.5rem;
+  }
+
+  .historia__card__item__texto p {
+    font-size: 1.3rem;
+    line-height: 1.5;
+  }
+
+  /* Estilos Curiosidades */
+  #curiosidades h2 {
+    font-size: 1.8rem;
+  }
+
+  #curiosidades p {
+    font-size: 1.3rem;
+  }
+
+  .container__item details {
+    font-size: 1.3rem;
+  }
+
+  .container__item details summary {
+    font-size: 1.5rem;
+  }
+
+  /* Estilos Footer */
+  .footer__mailto {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    justify-items: center;
+    border-radius: 2rem;
+  }
+
+  .footer__mailto h2,
+  p {
+    font-size: 1.3rem;
+  }
+
+  .footer__mailto a {
+    font-size: 1.3rem;
+  }
+
+  .footer__info p {
+    font-size: 1.3rem;
+  }
+
+  .footer__info p:first-child {
+    font-size: 1.5rem;
+  }
+
+  .footer__info ul li a img {
+    object-fit: cover;
+    width: 2.1rem;
+  }
 }
 
 /* Laptop  */
 @media screen and (min-width: 1024px) {
+  /* Estilo Globales */
+  .btn {
+    display: none;
+  }
+
+  .abrir {
+    display: none;
+  }
+
+  .cerrar {
+    display: none;
+  }
+
+  /* Estilos Navbar */
+  header {
+    position: sticky;
+    top: 0;
+    z-index: 2;
+  }
+
+  #label {
+    font-size: 1.9rem;
+    top: 1.5rem;
+    right: 1.4rem;
+  }
+
+  .navbar {
+    position: static;
+    height: 10dvh;
+    background-color: var(--color2);
+    border: 1px solid var(--color5);
+  }
+
+  .navbar__list {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+  }
+
+  .navbar__list__item a {
+    font-size: 1.6rem;
+    color: var(--color4);
+  }
+
+  /* Estilos Inicio */
+  .inicio__texto h1 {
+    font-size: 1.9rem;
+  }
+
+  .inicio__texto h2 {
+    font-size: 1.3rem;
+  }
+
+  /* Conoce Nicaragua */
+  .conoceNic h2 {
+    font-size: 1.6rem;
+  }
+
+  .conoceNic__video video {
+    width: 70%;
+  }
+
+  /* Estilos Turismo */
+  #turismo h2 {
+    font-size: 1.9rem;
+  }
+
+  #turismo p {
+    font-size: 1.4rem;
+  }
+
+  .turismo__cards {
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 1rem;
+    margin: 2rem;
+  }
+
+  .turismo__cards__ciudades-mostar {
+    display: none;
+  }
+
+  .turismo__cards__ciudades:hover .turismo__cards__ciudades-mostar {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    gap: 1rem;
+    border-radius: 1rem;
+    background-color: #00000080;
+  }
+
+  .turismo__cards__ciudades-mostar h3 {
+    font-size: 1.6rem;
+  }
+
+  .turismo__cards__ciudades-mostar ul li a {
+    font-size: 1.4rem;
+  }
+
+  #check-Turismo:not(:checked) ~ .oculto {
+    display: block;
+  }
+
+  /* Estilos Gastronomía */
+  #gastronomía h2 {
+    font-size: 1.9rem;
+  }
+
+  #gastronomía p {
+    font-size: 1.3rem;
+  }
+
+  .gastronomía__cards {
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 2rem;
+    margin: 2rem;
+  }
+
+  .gastronomía__card__item-mostrar p {
+    font-size: 1.4rem;
+  }
+
+  #check-Gastronomía:not(:checked) ~ .oculto {
+    display: block;
+  }
+
+  /* Estilos Historia */
+  #historia h2 {
+    font-size: 1.9rem;
+  }
+
+  #historia p {
+    font-size: 1.4rem;
+  }
+
+  .historia__cards {
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 4rem;
+    margin: 2rem;
+  }
+
+  .historia__card__item h3 {
+    font-size: 1.6rem;
+  }
+
+  .historia__card__item__texto p {
+    font-size: 1.4rem;
+    line-height: 1.5;
+  }
+
+  #check-historia:not(:checked) ~ .oculto {
+    display: block;
+  }
+
+  /* Estilos Curiosidades */
+  #curiosidades h2 {
+    font-size: 1.9rem;
+  }
+
+  #curiosidades p {
+    font-size: 1.4rem;
+  }
+
+  .curiosidades__container {
+    width: 80%;
+    margin: 2rem auto;
+  }
+
+  .container__item details {
+    font-size: 1.4rem;
+  }
+
+  .container__item details summary {
+    font-size: 1.6rem;
+  }
+
+  #check-curiosidades:not(:checked) ~ .oculto {
+    display: block;
+  }
+
+  /* Estilos Footer */
+  .footer__mailto {
+    height: 150px;
+    margin: 3rem;
+  }
+
+  .footer__mailto h2,
+  p {
+    font-size: 1.4rem;
+  }
+
+  .footer__mailto a {
+    font-size: 1.4rem;
+  }
+
+  .footer__info p {
+    font-size: 1.4rem;
+  }
+
+  .footer__info p:first-child {
+    font-size: 1.6rem;
+  }
+
+  .footer__info ul li a img {
+    object-fit: cover;
+    width: 2.2rem;
+  }
 }
 
 /* Laptop L */
 @media screen and (min-width: 1440px) {
+  /* Estilos Navbar */
+  .navbar__list__item a {
+    font-size: 1.7rem;
+    color: var(--color4);
+  }
+
+  /* Estilos Inicio */
+  .inicio__texto h1 {
+    font-size: 2rem;
+  }
+
+  .inicio__texto h2 {
+    font-size: 1.4rem;
+  }
+
+  /* Conoce Nicaragua */
+  .conoceNic h2 {
+    font-size: 1.7rem;
+  }
+
+  .conoceNic__video video {
+    width: 60%;
+  }
+
+  /* Estilos Turismo */
+  #turismo h2 {
+    font-size: 2rem;
+  }
+
+  #turismo p {
+    font-size: 1.5rem;
+  }
+
+  .turismo__cards {
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  }
+
+  .turismo__cards__ciudades-mostar h3 {
+    font-size: 1.7rem;
+  }
+
+  .turismo__cards__ciudades-mostar ul li a {
+    font-size: 1.5rem;
+  }
+
+  /* Estilos Gastronomía */
+  #gastronomía h2 {
+    font-size: 2rem;
+  }
+
+  #gastronomía p {
+    font-size: 1.4rem;
+  }
+
+  .gastronomía__card__item-mostrar p {
+    font-size: 1.5rem;
+  }
+
+  /* Estilos Historia */
+  #historia h2 {
+    font-size: 2rem;
+  }
+
+  #historia p {
+    font-size: 1.5rem;
+  }
+
+  .historia__card__item h3 {
+    font-size: 1.7rem;
+  }
+
+  .historia__card__item__texto p {
+    font-size: 1.5rem;
+    line-height: 1.5;
+  }
+
+  /* Estilos Curiosidades */
+  #curiosidades h2 {
+    font-size: 2rem;
+  }
+
+  #curiosidades p {
+    font-size: 1.5rem;
+  }
+
+  .curiosidades__container {
+    width: 80%;
+    margin: 2rem auto;
+  }
+
+  .container__item details {
+    font-size: 1.5rem;
+  }
+
+  .container__item details summary {
+    font-size: 1.7rem;
+  }
+
+  /* Estilos Footer */
+  .footer__mailto {
+    height: 200px;
+    margin: 4rem;
+  }
+
+  .footer__mailto h2,
+  p {
+    font-size: 1.5rem;
+  }
+
+  .footer__mailto a {
+    font-size: 1.5rem;
+  }
+
+  .footer__info p {
+    font-size: 1.5rem;
+  }
+
+  .footer__info p:first-child {
+    font-size: 1.7rem;
+  }
+
+  .footer__info ul li a img {
+    object-fit: cover;
+    width: 2.3rem;
+  }
 }
 
 /* 4K */
 @media screen and (min-width: 2560px) {
-}
+  /* Estilos Navbar */
+  .navbar__list__item a {
+    font-size: 2.2rem;
+    color: var(--color4);
+  }
 
-/* .turismo__cards__ciudades-mostar {
-  display: none;
-}
+  /* Estilos Inicio */
+  .inicio__texto h1 {
+    font-size: 2.5rem;
+  }
 
-.turismo__cards__ciudades:hover .turismo__cards__ciudades-mostar {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  height: 100%;
-  gap: 1rem;
-  border-radius: 1rem;
-  background-color: #00000080;
-} */
+  .inicio__texto h2 {
+    font-size: 1.9rem;
+  }
+
+  /* Conoce Nicaragua */
+  .conoceNic h2 {
+    font-size: 2.2rem;
+  }
+
+  .conoceNic__video video {
+    width: 60%;
+  }
+
+  /* Estilos Turismo */
+  #turismo h2 {
+    font-size: 2.5rem;
+  }
+
+  #turismo p {
+    font-size: 2rem;
+  }
+
+  .turismo__cards {
+    grid-template-columns: repeat(auto-fit, minmax(600px, 1fr));
+  }
+
+  .turismo__cards__ciudades-mostar h3 {
+    font-size: 2.2rem;
+  }
+
+  .turismo__cards__ciudades-mostar ul li a {
+    font-size: 2rem;
+  }
+
+  /* Estilos Gastronomía */
+  #gastronomía h2 {
+    font-size: 2.5rem;
+  }
+
+  #gastronomía p {
+    font-size: 1.9rem;
+  }
+
+  .gastronomía__cards {
+    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+    gap: 2rem;
+    margin: 2rem;
+  }
+
+  .gastronomía__card__item-mostrar p {
+    font-size: 2rem;
+  }
+
+  /* Estilos Historia */
+  #historia h2 {
+    font-size: 2.5rem;
+  }
+
+  #historia p {
+    font-size: 2rem;
+  }
+
+  .historia__cards {
+    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+    gap: 4rem;
+    margin: 2rem;
+  }
+
+  .historia__card__item h3 {
+    font-size: 2.2rem;
+  }
+
+  .historia__card__item__texto p {
+    font-size: 2rem;
+    line-height: 1.5;
+  }
+
+  /* Estilos Curiosidades */
+  #curiosidades h2 {
+    font-size: 2.5rem;
+  }
+
+  #curiosidades p {
+    font-size: 2rem;
+  }
+
+  .curiosidades__container {
+    width: 80%;
+    margin: 2rem auto;
+  }
+
+  .container__item details {
+    font-size: 2rem;
+  }
+
+  .container__item details summary {
+    font-size: 2.2rem;
+  }
+
+  /* Estilos Footer */
+  .footer__mailto {
+    height: 250px;
+    margin: 5rem;
+  }
+
+  .footer__mailto h2,
+  p {
+    font-size: 2rem;
+  }
+
+  .footer__mailto a {
+    font-size: 2rem;
+  }
+
+  .footer__info p {
+    font-size: 2rem;
+  }
+
+  .footer__info p:first-child {
+    font-size: 2.1rem;
+  }
+
+  .footer__info ul li a img {
+    object-fit: cover;
+    width: 2.6rem;
+  }
+}
